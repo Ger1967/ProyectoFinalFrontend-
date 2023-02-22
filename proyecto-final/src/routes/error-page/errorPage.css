@@ -1,0 +1,40 @@
+.errorpage-container {
+  min-height: 100vh;
+  background-image: linear-gradient(125deg, #54bab9, #e9dac1);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #343434;
+}
+
+.errorpage-container h1 {
+  font-size: 160px;
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 20px;
+  background: url(./img/404.png) center no-repeat;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.errorpage-container button {
+  border: #54bab9;
+  text-decoration: none;
+  background: #54bab9;
+  padding: 12px 24px;
+  border-radius: 25px;
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.errorpage-container button:hover {
+  background: #188d8b;
+}
