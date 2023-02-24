@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import "./main.css";
 
 function Main(props) {
+  // const id = props.mostrarInmuebles.id_inmuebles;
+
+  // const { idInmueble } = useParams();
+
   return (
     <div className="main">
       <div className="main-titulo">
@@ -15,11 +19,7 @@ function Main(props) {
               <section className="main-body">
                 <div className="card">
                   <div className="card-foto">
-                    <img
-                      src="./img/estrellas-12-2048x1229.jpg"
-                      alt="depar"
-                      width="200"
-                    />
+                    <img src={inmuebles.foto} alt="foto" width="200" />
                   </div>
 
                   <article className="card-info">
@@ -41,7 +41,7 @@ function Main(props) {
                   </article>
 
                   <div className="card-btn">
-                    <Link to="/detalles">
+                    <Link to={`/detalles/${inmuebles.id_inmuebles}`}>
                       <button>Ver detalles</button>
                     </Link>
                   </div>

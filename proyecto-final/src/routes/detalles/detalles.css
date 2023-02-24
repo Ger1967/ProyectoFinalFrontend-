@@ -1,0 +1,88 @@
+.detalles {
+  padding: 3rem;
+  background-color: #f7ecde;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.seccion-detalles {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 0.5fr auto;
+  grid-template-areas:
+    "foto         detalles"
+    "descripcion contacto"
+    "ubicacion    contacto";
+  width: 70vw;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detalles-img {
+  grid-area: foto;
+  margin: 2rem;
+}
+
+.detalles-img img {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.detalles-body {
+  grid-area: detalles;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: #fbf8f1;
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 2rem;
+  background-color: #54bab9;
+  height: 25rem;
+  border-radius: 10px;
+}
+
+.detalles-body p {
+  margin-top: 0;
+}
+
+.contacto {
+  grid-area: contacto;
+  margin: 0 2rem;
+}
+
+.descripcion {
+  grid-area: descripcion;
+  margin: 0 2rem;
+}
+
+.ubicacion {
+  grid-area: ubicacion;
+  margin: 0 2rem;
+}
+
+/* BOTON ATRAS */
+
+.detalles-btn button {
+  width: 4.5rem;
+  height: 2rem;
+  border-radius: 7px;
+  border: none;
+  background-color: #54bab9;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.4s;
+  color: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.detalles-btn button:hover {
+  background-color: #208e8c;
+}

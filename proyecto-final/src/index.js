@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     element: <Administrar />,
   },
   {
-    path: "/detalles",
+    path: "/detalles/:idInmueble",
     element: <Detalles />,
   },
 ]);
