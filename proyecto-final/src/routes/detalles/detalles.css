@@ -6,66 +6,7 @@
   margin: 0;
 }
 
-.seccion-detalles {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 0.5fr auto;
-  grid-template-areas:
-    "foto         detalles"
-    "descripcion contacto"
-    "ubicacion    contacto";
-  width: 70vw;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.detalles-img {
-  grid-area: foto;
-  margin: 2rem;
-}
-
-.detalles-img img {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.detalles-body {
-  grid-area: detalles;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  color: #fbf8f1;
-  font-weight: 500;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin: 2rem;
-  background-color: #54bab9;
-  height: 25rem;
-  border-radius: 10px;
-}
-
-.detalles-body p {
-  margin-top: 0;
-}
-
-.contacto {
-  grid-area: contacto;
-  margin: 0 2rem;
-}
-
-.descripcion {
-  grid-area: descripcion;
-  margin: 0 2rem;
-}
-
-.ubicacion {
-  grid-area: ubicacion;
-  margin: 0 2rem;
-}
-
-/* BOTON ATRAS */
+/*---------------------- BOTON ATRAS --------------------*/
 
 .detalles-btn button {
   width: 4.5rem;
@@ -85,4 +26,143 @@
 
 .detalles-btn button:hover {
   background-color: #208e8c;
+}
+
+/* ----------------TARJETA DE DETALLES ---------------*/
+.seccion-detalles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 0.9fr auto 1fr;
+  grid-template-areas:
+    "foto         detalles"
+    "descripcion contacto"
+    "ubicacion    ubicacion";
+  width: 70vw;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.detalles-img {
+  grid-area: foto;
+  margin: 2rem;
+}
+
+.detalles-img img {
+  width: 100%;
+  height: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.detalles-body {
+  grid-area: detalles;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fbf8f1;
+  font-weight: 500;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 1rem;
+  background-color: #54bab9;
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
+}
+
+.detalles-body p {
+  margin-top: 0;
+}
+
+.direccion {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 1rem;
+  /* justify-self: flex-end; */
+}
+
+.icono-direccion {
+  width: 6%;
+  height: 55%;
+  filter: invert(92%) sepia(15%) saturate(335%) hue-rotate(329deg)
+    brightness(104%) contrast(94%);
+}
+
+.direccion p {
+  width: 100%;
+  /* margin-bottom: 1rem; */
+}
+
+/*--------------------- CONTACTO --------------------*/
+
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: contacto;
+  margin: 0 2rem;
+  padding-bottom: 1rem;
+  background-color: #e9dac1;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+.nombre-email {
+  display: flex;
+  width: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+form input {
+  border: thin solid rgb(131, 130, 130);
+  border-radius: 5px;
+  height: 25px;
+  width: 10rem;
+}
+
+textarea {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.nombre-apellido,
+.email {
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  width: 50%;
+}
+
+.enviar {
+  color: #fbf8f1;
+  font-weight: 600;
+  background-color: #54bab9;
+  border: none;
+  border-radius: 8px;
+  width: 20%;
+  padding: 5px;
+  margin-top: 0;
+  align-self: center;
+  cursor: pointer;
+}
+
+/* ---------------DESCRIPCION Y UBICACION------------------ */
+.descripcion {
+  grid-area: descripcion;
+  margin: 0 2rem;
+}
+
+.ubicacion {
+  grid-area: ubicacion;
+  margin: 0 2rem;
+  width: 100%;
 }
