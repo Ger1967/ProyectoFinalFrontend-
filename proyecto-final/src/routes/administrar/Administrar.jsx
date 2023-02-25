@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./administrar.css";
-import Modal_crear from "../modalCrear/Modal_crear";
+import ModalCrear from "../modalCrear/ModalCrear";
 
 function Administrar() {
   const [openModal, setOpenModal] = useState(false);
@@ -19,7 +19,9 @@ function Administrar() {
       </Link>
       <ul>
         <li>
-          {openModal === true ? <Modal_crear /> : null}
+          {openModal === true ? (
+            <ModalCrear cerrarModal={modalHandler} />
+          ) : null}
           <button onClick={modalHandler}>Crear una nueva publicacion</button>
         </li>
 

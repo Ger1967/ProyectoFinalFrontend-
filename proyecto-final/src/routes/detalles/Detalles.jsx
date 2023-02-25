@@ -46,7 +46,6 @@ function Detalles() {
               className="icono-direccion"
             />
             <p>
-              {" "}
               {arrayPublicacion[0]?.direccion}, {arrayPublicacion[0]?.barrio},{" "}
               {arrayPublicacion[0]?.departamento}
             </p>
@@ -98,17 +97,20 @@ function Detalles() {
             </button>
           </form>
         </div>
+
         <section className="descripcion">
           <h2>Descripcion</h2>
           <p>{arrayPublicacion[0]?.descripcion}</p>
         </section>
+
         <div className="ubicacion">
           <h2>Ubicacion</h2>
           <iframe
             src={arrayPublicacion[0]?.mapa}
             width="600"
             height="450"
-            allowfullscreen=""
+            title="ubicacion"
+            allowfFullScreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>

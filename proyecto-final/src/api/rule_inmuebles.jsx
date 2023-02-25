@@ -27,3 +27,17 @@ export const getPublicacionById = async (id) => {
       throw error.response.data.error || "Error procesando la solicitud";
     });
 };
+
+// REGISTRAR NUEVO INMUEBLE (MODAL CREAR)
+
+export const postInmueble = async () => {
+  let url = "/api/inmuebles/nuevoInmueble";
+  return await API.post(url)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};
