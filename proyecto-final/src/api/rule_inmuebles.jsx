@@ -13,3 +13,16 @@ export const inmuebles = async () => {
       throw error.response.data.error || "Error procesando la solicitud";
     });
 };
+
+export const login = async (name, password) => {
+  let url = "/api/formulario";
+  return await API.post(url, { name, password })
+    .then((response) => {
+      console.log(response);
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};

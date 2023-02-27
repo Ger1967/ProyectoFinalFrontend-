@@ -11,6 +11,7 @@ import Administrar from "./routes/administrar/Administrar";
 import ErrorPage from "./routes/error-page/ErrorPage";
 import App from "./App";
 import Detalles from "./routes/detalles/Detalles";
+import Home from "./routes/homeService/Home";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/detalles",
     element: <Detalles />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
   },
 ]);
 
