@@ -1,4 +1,28 @@
-import API from "./Rule_api";
+import API from "../api/Rule_api";
+
+export const log = async (email, password) => {
+  let url = "/api/formulario";
+  return await API.post(url, { email, password })
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};
+
+export const registro = async (nombre, email, password) => {
+  let url = "/api/formulario/register";
+  return await API.post(url, { nombre, email, password })
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error al registrar";
+    });
+};
 
 // MOSTRAR LOS INMUEBLES DE LA BD (CARDS)
 
@@ -14,11 +38,34 @@ export const inmuebles = async () => {
     });
 };
 
+<<<<<<< HEAD
 export const login = async (name, password) => {
   let url = "/api/formulario";
   return await API.post(url, { name, password })
     .then((response) => {
       console.log(response);
+=======
+// MOSTRAR DETALLES DE UNA PUBLICACION DETERMINADA (:id)
+
+export const getPublicacionById = async (id) => {
+  let url = "/api/inmuebles/" + id;
+  return await API.get(url)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};
+
+// REGISTRAR NUEVO INMUEBLE (MODAL CREAR)
+
+export const postInmueble = async () => {
+  let url = "/api/inmuebles/nuevoInmueble";
+  return await API.post(url)
+    .then((response) => {
+>>>>>>> 4a51fee8ac7c250d0b24f9c511e2e5eef85717ff
       return response.data;
     })
     .catch((error) => {

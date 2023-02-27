@@ -1,57 +1,37 @@
-import React, { useState } from "react";
-import "./login.css";
-import { login } from "../../api/Rule_inmuebles";
+import { log } from "../../api/Rule_inmuebles";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 function Login() {
-  const [data, setData] = useState({});
-  let navigate = useNavigate();
+  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
 
-  const onSubmit = async (e) => {
-    const email = e.target.Email.value;
-    const password = e.target.Password.value;
-    await login(email, password)
-      .then((response) => {
-        setData(response);
+  const onSubmit = async (data) => {
+    try {
+      const { email, password } = data;
+      const response = await log(email, password);
+      console.log(response);
+      if (email === data.email && password === data.password) {
         navigate(`home`);
-      })
-      // if (usuario !== data.name && password !== data.password) {
-      //   alert("Error");
-      // }
-      .catch((error) => {
-        alert(error);
-        throw error.response.data.error || "Error procesando la solicitud";
-      });
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Error procesando la solicitud");
+    }
   };
 
   return (
-    <div className="contenedor">
-      <div className="titulo">
-        <h1> Bienvenido </h1>
-      </div>
-      <form className="formulario" onSubmit={onSubmit}>
-        <div>
-          <label htmlFor="usuario">Usuario: </label>
-          <input
-            type="email"
-            required
-            placeholder="Complete con su e-mail"
-            name="Email"
-          />
-        </div>
-        <div>
-          <label htmlFor="password">Contraseña: </label>
-          <input
-            type="password"
-            required
-            placeholder="Contraseña"
-            name="Password"
-          />
-        </div>
-        <button type="submit">Ingresar</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <label>
+        Email:
+        <input type="text" {...register("email")} />
+      </label>
+      <label>
+        Password:
+        <input type="password" {...register("password")} />
+      </label>
+      <button type="submit">Log in</button>
+    </form>
   );
 }
-
 export default Login;
