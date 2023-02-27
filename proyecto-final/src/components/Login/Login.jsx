@@ -1,9 +1,37 @@
-import React, { useState } from "react";
+import { log } from "../../api/Rule_inmuebles";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 function Login() {
-  const [usuario, setUsuario] = useState({});
+  const { register, handleSubmit } = useForm();
+  const navigate = useNavigate();
 
-  return <div></div>;
+  const onSubmit = async (data) => {
+    try {
+      const { email, password } = data;
+      const response = await log(email, password);
+      console.log(response);
+      if (email === data.email && password === data.password) {
+        navigate(`home`);
+      }
+    } catch (error) {
+      console.log(error);
+      alert("Error procesando la solicitud");
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <label>
+        Email:
+        <input type="text" {...register("email")} />
+      </label>
+      <label>
+        Password:
+        <input type="password" {...register("password")} />
+      </label>
+      <button type="submit">Log in</button>
+    </form>
+  );
 }
-
 export default Login;
