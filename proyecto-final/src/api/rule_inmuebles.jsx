@@ -13,3 +13,31 @@ export const inmuebles = async () => {
       throw error.response.data.error || "Error procesando la solicitud";
     });
 };
+
+// MOSTRAR DETALLES DE UNA PUBLICACION DETERMINADA (:id)
+
+export const getPublicacionById = async (id) => {
+  let url = "/api/inmuebles/" + id;
+  return await API.get(url)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};
+
+// REGISTRAR NUEVO INMUEBLE (MODAL CREAR)
+
+export const postInmueble = async () => {
+  let url = "/api/inmuebles/nuevoInmueble";
+  return await API.post(url)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};
