@@ -11,6 +11,7 @@ import Administrar from "./routes/administrar/Administrar";
 import ErrorPage from "./routes/error-page/ErrorPage";
 import App from "./App";
 import Detalles from "./routes/detalles/Detalles";
+import Home from "../src/routes/homeService/Home";
 import ModalCrear from "./routes/modalCrear/ModalCrear";
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/detalles/:idInmueble",
     element: <Detalles />,
+  },
+  {
+    path: "/home",
+    element: <Home />,
   },
 ]);
 
