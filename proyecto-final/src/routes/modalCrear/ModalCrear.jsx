@@ -6,8 +6,8 @@ import "./modalCrear.css";
 function ModalCrear(props) {
   const [nuevoInmueble, setNuevoInmueble] = useState({});
 
-  const nuevaPublicacion = async () => {
-    await postInmueble().then((response) => {
+  const nuevaPublicacion = async (nuevaPub) => {
+    await postInmueble(nuevaPub).then((response) => {
       setNuevoInmueble(response);
     });
   };
@@ -18,9 +18,14 @@ function ModalCrear(props) {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    nuevaPublicacion(data);
-    alert("Se agrego la nueva Publicacion exisitosamente");
+  const onSubmit = async (data) => {
+    await postInmueble(data)
+      .then((response) => {
+        alert("Se agrego la nueva publicacion exitosamente");
+      })
+      .catch((error) => {
+        alert(error);
+      });
   };
 
   return (
@@ -53,12 +58,12 @@ function ModalCrear(props) {
             <option value="Tipo de propiedad" selected>
               Tipo de Propiedad
             </option>
-            <option value="ap">Apartamento</option>
-            <option value="mo">Monoambiente</option>
-            <option value="ca">Casa</option>
-            <option value="te">Terreno</option>
-            <option value="co">Local Comercial</option>
-            <option value="ot">Otro</option>
+            <option value="Apartamento">Apartamento</option>
+            <option value="Monoambiente">Monoambiente</option>
+            <option value="Casa">Casa</option>
+            <option value="Terreno">Terreno</option>
+            <option value="Local Comercial">Local Comercial</option>
+            <option value="Otro">Otro</option>
           </select>
           <input
             type="number"
@@ -104,10 +109,10 @@ function ModalCrear(props) {
             <option value="Departamento" selected>
               Departamento
             </option>
-            <option value="mon">Montevideo</option>
-            <option value="can">Canelones</option>
-            <option value="mal">Maldonado</option>
-            <option value="roc">Rocha</option>
+            <option value="Montevideo">Montevideo</option>
+            <option value="Canelones">Canelones</option>
+            <option value="Maldonado">Maldonado</option>
+            <option value="Rocha">Rocha</option>
           </select>
 
           <input
