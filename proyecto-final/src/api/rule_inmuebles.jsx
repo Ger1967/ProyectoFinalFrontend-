@@ -1,4 +1,4 @@
-import API from "./api/Rule_api";
+import API from "./Rule_api";
 
 // LOGIN DE USUARIOS
 export const log = async (email, password) => {
