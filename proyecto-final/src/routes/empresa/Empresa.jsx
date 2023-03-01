@@ -6,7 +6,7 @@ function Empresa() {
   return (
     <div>
       Empresa
-      <Link to="/">
+      <Link to="/home">
         <button>Atras</button>
       </Link>
     </div>

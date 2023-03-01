@@ -11,19 +11,146 @@
   z-index: 1;
 }
 
-/* .modal-crear {
-  width: 50vw;
-  height: 70vh;
-} */
-
 .formCrear {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  height: 90%;
+  align-items: center;
+  width: 40%;
+  height: 85%;
+  padding: 1rem;
   background-color: #fbf8f1;
-  /* border: thin solid rgb(219, 189, 15); */
-  border-radius: 5px;
+  border-radius: 10px;
   margin: auto;
   z-index: 2;
+}
+
+.btn-atras {
+  align-self: flex-start;
+  width: 4.5rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 7px;
+  border: none;
+  background-color: #54bab9;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.4s;
+  color: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-atras button {
+  padding: 2rem;
+}
+
+button:hover {
+  background-color: #208e8c;
+}
+
+.formCrear h2 {
+  align-self: center;
+  font-size: 2.5rem;
+  margin: 0;
+  color: #847864;
+}
+
+.modal-secciones {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 70%;
+  height: 60%;
+}
+
+select {
+  height: 1.8rem;
+  border-radius: 7px;
+  border-color: #847864;
+}
+input {
+  border-radius: 7px;
+  border-color: #847864;
+}
+
+/* -------------------seccion 1--------------------- */
+
+.modal-precio {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1.5rem 1rem 1rem 0;
+}
+
+.modal-precio input {
+  margin-left: 1.5rem;
+  width: 6rem;
+}
+
+/* -------------------seccion 2--------------------- */
+
+.modal-detalles {
+  margin: 0 1rem 1rem 0;
+}
+
+.modal-detalles input {
+  margin-left: 1.5rem;
+  width: 6rem;
+}
+
+/* -------------------seccion 3--------------------- */
+
+.modal-metraje {
+  margin: 0 1rem 1rem 0;
+}
+
+.modal-metraje input {
+  margin-right: 1.5rem;
+  width: 7rem;
+}
+
+/* -------------------seccion 4--------------------- */
+
+.modal-direccion {
+  margin: 0 1rem 1rem 0;
+}
+
+.modal-direccion input {
+  margin-left: 1.5rem;
+}
+
+/* -------------------seccion 5--------------------- */
+
+.modal-descripcion {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem 1rem 0;
+}
+
+.modal-descripcion input {
+  margin-bottom: 1rem;
+  width: 25rem;
+}
+
+textarea {
+  margin-bottom: 1rem;
+}
+/* -------------------seccion 6--------------------- */
+
+.btn-publicar {
+  width: 6rem;
+  height: 2rem;
+  margin-top: 4rem;
+  border-radius: 7px;
+  border: none;
+  background-color: #54bab9;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.4s;
+  color: none;
+  cursor: pointer;
+  text-decoration: none;
 }
