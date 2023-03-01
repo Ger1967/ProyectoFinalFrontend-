@@ -46,12 +46,17 @@
   line-height: 5rem;
   background-color: white;
   border: medium solid #54bab9;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 1rem;
+  cursor: pointer;
 }
 
 .btn-modal {
   font-size: 1.5rem;
   background-color: white;
   border: none;
+}
+
+.btn-modal:hover {
+  background-color: white;
 }
