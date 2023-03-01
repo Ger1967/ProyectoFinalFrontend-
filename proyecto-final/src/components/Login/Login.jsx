@@ -1,5 +1,5 @@
 import { log } from "../../api/Rule_inmuebles";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 
 function Login() {
@@ -31,6 +31,9 @@ function Login() {
         <input type="password" {...register("password")} />
       </label>
       <button type="submit">Log in</button>
+      <Link to="/register">
+        <button type="submit">Registrarse</button>
+      </Link>
     </form>
   );
 }

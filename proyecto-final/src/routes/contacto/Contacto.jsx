@@ -6,7 +6,7 @@ function Contacto() {
   return (
     <div>
       Contacto
-      <Link to="/">
+      <Link to="/home">
         <button>Atras</button>
       </Link>
     </div>

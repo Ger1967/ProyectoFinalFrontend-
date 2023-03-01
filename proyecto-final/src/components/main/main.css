@@ -10,9 +10,11 @@
   background-color: #fbf8f1;
 }
 
-.main-titulo {
-  margin-top: 0;
-  padding-top: 1rem;
+.main-titulo h2 {
+  margin: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
+  color: #847864;
 }
 
 .card {

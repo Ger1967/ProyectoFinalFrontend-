@@ -11,24 +11,27 @@ function Administrar() {
   };
 
   return (
-    <div>
-      <h2>Administrar</h2>
-
-      <Link to="/">
-        <button>Atras</button>
+    <div className="admin-fondo">
+      <Link to="/home" className="btn-container">
+        <button className="atras-admin">Atras</button>
       </Link>
-      <ul>
-        <li>
-          {openModal === true ? (
-            <ModalCrear cerrarModal={modalHandler} />
-          ) : null}
-          <button onClick={modalHandler}>Crear una nueva publicacion</button>
-        </li>
+      <h2 className="admin-titulo">Administrar Publicaciones</h2>
+      <div className="admin-menu">
+        <ul>
+          <li className="menu-opciones">
+            {openModal === true ? (
+              <ModalCrear cerrarModal={modalHandler} />
+            ) : null}
+            <button className="btn-modal" onClick={modalHandler}>
+              Crear una nueva publicacion
+            </button>
+          </li>
 
-        <li>Borrar una publicacion</li>
-        <li>Modificar publicacion existente</li>
-        <li>Ver todas las publicaciones</li>
-      </ul>
+          <li className="menu-opciones">Borrar una publicacion</li>
+          <li className="menu-opciones">Modificar publicacion existente</li>
+          <li className="menu-opciones">Ver todas las publicaciones</li>
+        </ul>
+      </div>
     </div>
   );
 }
