@@ -1,4 +1,4 @@
-import API from "../api/Rule_api";
+import API from "./api/Rule_api";
 
 export const log = async (email, password) => {
   let url = "/api/formulario";
