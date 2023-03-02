@@ -68,14 +68,14 @@ export const postInmueble = async () => {
 
 // FILTRADO DE INMUEBLES
 
-export const obtenerDatos = async ({
-  operacion,
-  propiedad,
-  dormitorio,
-  departamento,
-}) => {
+export const obtenerDatos = async (data) => {
   let url = "/api/inmuebles/filtro/inmueblesFiltrados";
-  return await API.get(url, { operacion, propiedad, dormitorio, departamento })
+  return await API.post(url, {
+    operacion: data?.operacion,
+    inmueble: data?.propiedad,
+    dormitorio: data?.dormitorio,
+    departamento: data?.departamento,
+  })
     .then((response) => {
       return response.data;
     })

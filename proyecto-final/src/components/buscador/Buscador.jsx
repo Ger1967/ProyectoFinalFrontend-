@@ -37,29 +37,10 @@ const departamentos = [
 
 function Buscador() {
   const [inmueble, setInmueble] = useState([]);
-  const { handleSubmit } = useForm();
-  // const filtrarInmuebles = async (
-  //   operacion,
-  //   propiedad,
-  //   dormitorio,
-  //   departamento
-  // ) => {
-  //   await obtenerDatos()
-  //     .then((response) => {
-  //       setInmueble(response);
-  //     })
-  //     .catch((error) => {
-  //       alert(error);
-  //     });
-  // };
+  const { register, handleSubmit } = useForm();
 
-  const onSubmit = async ({
-    operacion,
-    propiedad,
-    dormitorio,
-    departamento,
-  }) => {
-    await obtenerDatos({ operacion, propiedad, dormitorio, departamento })
+  const onSubmit = async (data) => {
+    await obtenerDatos(data)
       .then((response) => {
         setInmueble(response);
       })
@@ -72,24 +53,24 @@ function Buscador() {
     <div className="container">
       <h1>Encuentra la Propiedad que estas Buscando</h1>
       <form className="filtro" onSubmit={handleSubmit(onSubmit)}>
-        <select name="Operacion">
+        <select name="Operacion" {...register("operacion")}>
           {operacion.map((operacion) => {
             return <option value={operacion.value}>{operacion.mostrar}</option>;
           })}
         </select>
-        <select name="Tipo">
+        <select name="Tipo" {...register("propiedad")}>
           {propiedad.map((propiedad) => {
             return <option value={propiedad.value}>{propiedad.mostrar}</option>;
           })}
         </select>
-        <select name="Domitorios">
+        <select name="Domitorios" {...register("dormitorio")}>
           {dormitorios.map((dormitorios) => {
             return (
               <option value={dormitorios.value}>{dormitorios.mostrar}</option>
             );
           })}
         </select>
-        <select name="Departamento">
+        <select name="Departamento" {...register("departamento")}>
           {departamentos.map((departamentos) => {
             return (
               <option value={departamentos.value}>
