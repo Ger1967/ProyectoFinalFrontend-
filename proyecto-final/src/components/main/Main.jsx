@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 import "./main.css";
 
 function Main(props) {
-  // const id = props.mostrarInmuebles.id_inmuebles;
-
-  // const { idInmueble } = useParams();
-
   return (
     <div className="main">
       <div className="main-titulo">
