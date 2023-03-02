@@ -20,14 +20,28 @@ function Empresa() {
         <div className="nosotros">
           <h3>NOSOTROS</h3>
           <div className="fotos-nosotros">
-            <div>
-              <img src="" alt="CEO German" />
+            <div className="ceos">
+              <div className="foto-ceo">
+                <img src="" alt="CEO German" />
+              </div>
+              <h4>German Alfaro</h4>
+              <p>Home Service CEO</p>
             </div>
-            <div>
-              <img src="" alt="CEO Shindey" />
+
+            <div className="ceos">
+              <div className="foto-ceo">
+                <img src="" alt="CEO Shindey" />
+              </div>
+              <h4>Shindey Madrid</h4>
+              <p>Home Service CEO</p>
             </div>
-            <div>
-              <img src="" alt="CEO Bruno" />
+
+            <div className="ceos">
+              <div className="foto-ceo">
+                <img src="" alt="CEO Bruno" />
+              </div>
+              <h4>Bruno Benvenuto</h4>
+              <p>Home Service CEO</p>
             </div>
           </div>
           <article className="nosotros-descripcion">
@@ -40,8 +54,6 @@ function Empresa() {
             </p>
           </article>
         </div>
-
-        <div className="empres-funciones"></div>
       </section>
     </div>
   );

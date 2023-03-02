@@ -1,0 +1,169 @@
+.contacto-page {
+  width: 100vw;
+  height: fit-content;
+  background-color: #fbf8f1;
+  margin: 0;
+}
+
+.header-contacto {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 20vh;
+  background-color: #f7ecde;
+}
+
+.logoHS img {
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.header-contacto h2 {
+  padding-left: 25rem;
+  text-transform: capitalize;
+  font-size: 4rem;
+  letter-spacing: 15px;
+  color: #847864;
+}
+
+.contacto-atras button {
+  width: 4.5rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 7px;
+  border: none;
+  background-color: #54bab9;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.4s;
+  color: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.body-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  color: #847864;
+  background-color: #f7ecde;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.titulo-contacto h3 {
+  font-size: 2rem;
+  margin: 1rem 0 0 0;
+}
+
+.titulo-contacto p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.contacto-info {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  margin-top: 3rem;
+}
+
+/* ---------------------------INFO SUCURSALES-------------------------- */
+
+.sucursales {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f7ecde;
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+.oficinas {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 1rem;
+}
+
+.oficina-foto {
+  width: 50%;
+  border-radius: 10px;
+}
+
+.oficina-foto img {
+  border-radius: 10px;
+}
+
+.oficina-detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.oficina-titulo h4 {
+  color: #847864;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.oficina-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.oficina-info {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 1rem;
+  margin: 0.3rem;
+}
+
+.oficina-icon {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+.icon-info {
+  font-size: 0.8rem;
+  margin: 0 0.3rem;
+  align-self: flex-end;
+}
+/* --------------------------FORMULARIO DE CONTACTO-------------------- */
+
+.contacto-form {
+  width: 50%;
+  padding: 1rem;
+}
+
+.contacto-form h3 {
+  font-size: 1.5rem;
+  color: #847864;
+  margin-top: 0;
+}
+
+.contacto-form input,
+textarea {
+  width: 80%;
+  margin: 1rem;
+  border: none;
+  background-color: #f7ecde;
+}
+
+.contacto-form textarea {
+  width: 80%;
+}
