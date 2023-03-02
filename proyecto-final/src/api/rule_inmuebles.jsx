@@ -38,13 +38,6 @@ export const inmuebles = async () => {
     });
 };
 
-<<<<<<< HEAD
-export const login = async (name, password) => {
-  let url = "/api/formulario";
-  return await API.post(url, { name, password })
-    .then((response) => {
-      console.log(response);
-=======
 // MOSTRAR DETALLES DE UNA PUBLICACION DETERMINADA (:id)
 
 export const getPublicacionById = async (id) => {
@@ -65,7 +58,25 @@ export const postInmueble = async () => {
   let url = "/api/inmuebles/nuevoInmueble";
   return await API.post(url)
     .then((response) => {
->>>>>>> 4a51fee8ac7c250d0b24f9c511e2e5eef85717ff
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};
+
+// FILTRADO DE INMUEBLES
+
+export const obtenerDatos = async ({
+  operacion,
+  propiedad,
+  dormitorio,
+  departamento,
+}) => {
+  let url = "/api/inmuebles/filtro/inmueblesFiltrados";
+  return await API.get(url, { operacion, propiedad, dormitorio, departamento })
+    .then((response) => {
       return response.data;
     })
     .catch((error) => {
