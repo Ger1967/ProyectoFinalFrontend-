@@ -67,3 +67,22 @@ export const postInmueble = async (nuevaPub) => {
       throw error.response.data.error || "Error procesando la solicitud";
     });
 };
+
+// FILTRADO DE INMUEBLES
+
+export const obtenerDatos = async ({
+  operacion,
+  propiedad,
+  dormitorio,
+  departamento,
+}) => {
+  let url = "/api/inmuebles/filtro/inmueblesFiltrados";
+  return await API.get(url, { operacion, propiedad, dormitorio, departamento })
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};

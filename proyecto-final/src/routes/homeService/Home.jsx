@@ -4,6 +4,7 @@ import Header from "../../components/header/Header";
 import Main from "../../components/main/Main";
 import Footer from "../../components/footer/Footer";
 import "./home.css";
+import Buscador from "../../components/buscador/Buscador";
 
 function Home() {
   const [mostrarInmuebles, setMostrarInmuebles] = useState([]);
@@ -20,6 +21,7 @@ function Home() {
   return (
     <div className="home">
       <Header />
+      <Buscador />
       <Main mostrarInmuebles={mostrarInmuebles} />
       <Footer />
     </div>
