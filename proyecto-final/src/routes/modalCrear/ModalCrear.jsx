@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { postInmueble } from "../../api/Rule_inmuebles";
+import { postInmueble, uploadImage } from "../../api/Rule_inmuebles";
 import "./modalCrear.css";
 
 function ModalCrear(props) {
@@ -11,6 +11,20 @@ function ModalCrear(props) {
       setNuevoInmueble(response);
     });
   };
+
+
+const handleUpload = async (data) => {
+  const {formaData} = data;
+  const response = await uploadImage(formaData)
+  console.log(response)
+  const formData = new FormData()
+  formData.append("foto", selectedFile);
+  formData.append("nombre", nombre);
+  formData.append("descripcion", descripcion);
+
+}
+
+
 
   const {
     register,
