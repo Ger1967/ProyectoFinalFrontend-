@@ -45,6 +45,7 @@ function Footer() {
             </div>
           </div>
         </section>
+
         <section className="footer-detalles">
           <div className="footer-titulo">
             <h4>Pocitos</h4>
@@ -80,6 +81,7 @@ function Footer() {
             </div>
           </div>
         </section>
+
         <section className="footer-detalles">
           <div className="footer-titulo">
             <h4>Punta del Este</h4>
