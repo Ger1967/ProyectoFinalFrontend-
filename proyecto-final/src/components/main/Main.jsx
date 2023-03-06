@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./main.css";
+import { obtenerDatos } from "../../api/Rule_inmuebles";
+import { useState } from "react";
+import Buscador from "../buscador/Buscador";
 
 function Main(props) {
   // const id = props.mostrarInmuebles.id_inmuebles;
 
   // const { idInmueble } = useParams();
-
+  const [resultados, setResultados] = useState([]);
   return (
     <div className="main">
       <div className="main-titulo">
@@ -14,8 +17,17 @@ function Main(props) {
       </div>
       <div className="main">
         {props.mostrarInmuebles.map((inmuebles) => {
+          const enviarDatos = async (data) => {
+            try {
+              const response = await obtenerDatos(data);
+              setResultados(response.data);
+            } catch (error) {
+              console.error(error);
+            }
+          };
           return (
             <>
+              <Buscador enviarDatos={enviarDatos} />
               <section className="main-body">
                 <div className="card">
                   <div className="card-foto">

@@ -71,10 +71,22 @@ export const postInmueble = async (nuevaPub) => {
 export const foto = async (formData) => {
   let url = "/api/inmuebles/foto";
   return await API.post(url, formData)
-  .then(() => {
-    console.log("imagen publicada correctamente");
-  })
-  .catch((err) => {
-    console.error(err);
-  })
-}
+    .then(() => {
+      console.log("imagen publicada correctamente");
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+};
+
+export const obtenerDatos = async (data) => {
+  let url = "/api/inmuebles/filtro/inmueblesFiltrados";
+  return await API.post(url, { data })
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};
