@@ -1,5 +1,6 @@
-import API from "../api/Rule_api";
+import API from "./Rule_api";
 
+// LOGIN DE USUARIOS
 export const log = async (email, password) => {
   let url = "/api/formulario";
   return await API.post(url, { email, password })
@@ -12,6 +13,7 @@ export const log = async (email, password) => {
     });
 };
 
+// REGISTRO DE USUARIOS
 export const registro = async (nombre, email, password) => {
   let url = "/api/formulario/register";
   return await API.post(url, { nombre, email, password })
@@ -54,9 +56,9 @@ export const getPublicacionById = async (id) => {
 
 // REGISTRAR NUEVO INMUEBLE (MODAL CREAR)
 
-export const postInmueble = async () => {
+export const postInmueble = async (nuevaPub) => {
   let url = "/api/inmuebles/nuevoInmueble";
-  return await API.post(url)
+  return await API.post(url, nuevaPub)
     .then((response) => {
       return response.data;
     })

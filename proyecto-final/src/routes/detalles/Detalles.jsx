@@ -20,7 +20,7 @@ function Detalles() {
 
   return (
     <div className="detalles">
-      <Link to="/" className="detalles-btn">
+      <Link to="/home" className="detalles-btn">
         <button>Atrás</button>
       </Link>
 

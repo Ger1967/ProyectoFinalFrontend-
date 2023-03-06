@@ -8,7 +8,7 @@ function ErrorPage() {
       <h2>¡Lo sentimos!</h2>
       <h1>404</h1>
       <p>No se pudo encontrar la página solicitada...</p>
-      <Link to="/">
+      <Link to="/home">
         <button>Volver a Inicio</button>
       </Link>
     </div>
