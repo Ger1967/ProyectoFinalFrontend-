@@ -13,6 +13,7 @@ import App from "./App";
 import Detalles from "./routes/detalles/Detalles";
 import Home from "../src/routes/homeService/Home";
 import ModalCrear from "./routes/modalCrear/ModalCrear";
+import Register from "./components/Login/Register";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
 

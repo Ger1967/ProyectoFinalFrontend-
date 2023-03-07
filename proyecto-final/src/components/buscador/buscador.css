@@ -10,7 +10,7 @@
     background-size: cover;
 }
 
-h1{
+.tituloBuscador{
     grid-area: titulo;
     background-color: rgb(233, 218, 193, 0.7);
     width: 40vw;

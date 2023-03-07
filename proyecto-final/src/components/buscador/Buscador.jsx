@@ -51,7 +51,9 @@ function Buscador() {
 
   return (
     <div className="container">
-      <h1>Encuentra la Propiedad que estas Buscando</h1>
+      <h1 className="tituloBuscador">
+        Encuentra la Propiedad que estas Buscando
+      </h1>
       <form className="filtro" onSubmit={handleSubmit(onSubmit)}>
         <select name="Operacion" {...register("operacion")}>
           {operacion.map((operacion) => {
