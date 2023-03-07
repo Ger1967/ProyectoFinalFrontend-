@@ -36,18 +36,7 @@ const departamentos = [
 ];
 
 function Buscador(props) {
-  // const [inmueble, setInmueble] = useState([]);
   const { register, handleSubmit } = useForm();
-
-  // const onSubmit = async (data) => {
-  //   await obtenerDatos(data)
-  //     .then((response) => {
-  //       setInmueble(response);
-  //     })
-  //     .catch((error) => {
-  //       alert(error);
-  //     });
-  // };
 
   return (
     <div className="container">

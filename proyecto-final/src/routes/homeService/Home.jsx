@@ -8,37 +8,30 @@ import Buscador from "../../components/buscador/Buscador";
 import { obtenerDatos } from "../../api/Rule_inmuebles";
 
 function Home() {
-  const [mostrarInmuebles, setMostrarInmuebles] = useState([]);
-
-  // const [flag, setFlag] = useState(false);
-
-  // EXPERIMENTO PARA MOSTRAR LOS INMUEBLES FILTRADOS
+  // PARA MOSTRAR LOS INMUEBLES FILTRADOS
 
   const [inmueblesFiltrados, setInmueblesFiltrados] = useState([]);
 
   const onSubmit = async (data) => {
     await obtenerDatos(data)
       .then((response) => {
-        console.log(response);
         setInmueblesFiltrados(response);
-        // setFlag(!flag);
       })
       .catch((error) => {
         alert(error);
       });
   };
 
-  // -----------------
+  // PARA MOSTRAR TODOS LOS INMUEBLES EN LA BD
 
   const getInmuebles = async () => {
     await inmuebles().then((response) => {
-      setMostrarInmuebles(response);
+      setInmueblesFiltrados(response);
     });
   };
 
   useEffect(() => {
     getInmuebles();
-    // setInmueblesFiltrados(response);
   }, []);
 
   return (
