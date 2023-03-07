@@ -163,9 +163,26 @@ function Contacto() {
 
           <div className="contacto-form">
             <h3>Envianos tu consulta:</h3>
-            <form action="">
-              <input type="text" placeholder="Nombre *" />
-              <input type="email" placeholder="Email *" />
+            <form
+              action="https://formsubmit.co/shindeymadrid@gmail.com"
+              method="POST"
+            >
+              <input
+                type="text"
+                name="nombre"
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+                title="Nombre solo acepta letras y espacios en blanco"
+                required
+                placeholder="Nombre *"
+              />
+              <input
+                type="email"
+                name="correo"
+                pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+                title="Formato de correo invalido"
+                required
+                placeholder="Email *"
+              />
               <input type="number" placeholder="Teléfono / Celular *" />
               <textarea
                 name="Consulta"

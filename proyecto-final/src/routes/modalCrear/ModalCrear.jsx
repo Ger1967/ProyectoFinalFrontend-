@@ -5,6 +5,7 @@ import "./modalCrear.css";
 
 function ModalCrear(props) {
   const [nuevoInmueble, setNuevoInmueble] = useState({});
+  const [file, setFile] = useState(null);
 
   const nuevaPublicacion = async (nuevaPub) => {
     await postInmueble(nuevaPub).then((response) => {
@@ -38,6 +39,32 @@ function ModalCrear(props) {
       });
   };
 
+  // LOGICA PARA CARGAR LA FOTO
+  const selectedHandler = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const sendHandler = () => {
+    if (!file) {
+      alert("Por favor carga una imagen para tu publicacion.");
+      return;
+    }
+
+    const formdata = new FormData();
+    formdata.append("image", file);
+
+    fetch("http://localhost:3001/api/inmuebles/nuevoInmueble/foto", {
+      method: "POST",
+      body: formdata,
+    })
+      .then((res) => res.text())
+      .then((res) => console.log(res))
+      .catch((err) => {
+        console.error(err);
+      });
+    setFile(null);
+  };
+
   return (
     <div className="fondoModal">
       <form className="formCrear" onSubmit={handleSubmit(onSubmit)}>
@@ -53,7 +80,10 @@ function ModalCrear(props) {
               required
               {...register("operacion", require)}
             >
-              <option value="Tipo de Operacion" selected>
+              <option
+                value="Tipo de Operacion"
+                defaultValue={"Tipo de Operacion"}
+              >
                 Tipo de Operacion
               </option>
               <option value="Alquiler">Alquiler</option>
@@ -72,7 +102,10 @@ function ModalCrear(props) {
 
           <section className="modal-detalles">
             <select name="Tipo" required {...register("inmueble")}>
-              <option value="Tipo de propiedad" selected>
+              <option
+                value="Tipo de propiedad"
+                defaultValue={"Tipo de propiedad"}
+              >
                 Tipo de Propiedad
               </option>
               <option value="Apartamento">Apartamento</option>
@@ -123,7 +156,7 @@ function ModalCrear(props) {
 
           <section className="modal-direccion">
             <select name="Departamento" required {...register("departamento")}>
-              <option value="Departamento" selected>
+              <option value="Departamento" defaultValue={"Departamento"}>
                 Departamento
               </option>
               <option value="Montevideo">Montevideo</option>
@@ -164,12 +197,17 @@ function ModalCrear(props) {
               {...register("mapa")}
             ></input>
 
-            <input type="file" name="foto" {...register("foto")} />
+            <input
+              type="file"
+              name="foto"
+              onChange={selectedHandler}
+              {...register("foto")}
+            />
           </section>
         </div>
 
         <div>
-          <button type="submit" className="btn-publicar">
+          <button type="submit" className="btn-publicar" onClick={sendHandler}>
             Publicar
           </button>
         </div>
