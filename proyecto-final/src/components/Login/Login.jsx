@@ -34,17 +34,6 @@ function Login() {
         </label>
         <button type="submit">Log in</button>
       </div>
-
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label>
-        Email:
-        <input type="text" {...register("email")} />
-      </label>
-      <label>
-        Password:
-        <input type="password" {...register("password")} />
-      </label>
-      <button type="submit">Log in</button>
       <Link to="/register">
         <button type="submit">Registrarse</button>
       </Link>
