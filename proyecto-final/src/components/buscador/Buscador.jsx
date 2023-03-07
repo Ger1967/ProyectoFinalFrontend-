@@ -35,8 +35,8 @@ const departamentos = [
   { value: "Rocha", mostrar: "Rocha" },
 ];
 
-function Buscador(props) {
-  const { enviarDatos } = props;
+function Buscador() {
+
   const [inmueble, setInmueble] = useState([]);
   const { register, handleSubmit } = useForm();
 

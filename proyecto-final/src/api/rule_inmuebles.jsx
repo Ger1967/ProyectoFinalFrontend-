@@ -68,6 +68,26 @@ export const postInmueble = async (nuevaPub) => {
     });
 };
 
+
+// FILTRADO DE INMUEBLES
+
+export const obtenerDatos = async (data) => {
+  let url = "/api/inmuebles/filtro/inmueblesFiltrados";
+  return await API.post(url, {
+    operacion: data?.operacion,
+    inmueble: data?.propiedad,
+    dormitorio: data?.dormitorio,
+    departamento: data?.departamento,
+  })
+     .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+      throw error.response.data.error || "Error procesando la solicitud";
+    });
+};
+
 export const foto = async (formData) => {
   let url = "/api/inmuebles/foto";
   return await API.post(url, formData)
@@ -79,14 +99,3 @@ export const foto = async (formData) => {
     });
 };
 
-export const obtenerDatos = async (data) => {
-  let url = "/api/inmuebles/filtro/inmueblesFiltrados";
-  return await API.post(url, { data })
-    .then((response) => {
-      return response.data;
-    })
-    .catch((error) => {
-      console.log(error);
-      throw error.response.data.error || "Error procesando la solicitud";
-    });
-};
