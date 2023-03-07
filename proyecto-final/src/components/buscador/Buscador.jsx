@@ -36,6 +36,7 @@ const departamentos = [
 ];
 
 function Buscador() {
+
   const [inmueble, setInmueble] = useState([]);
   const { register, handleSubmit } = useForm();
 

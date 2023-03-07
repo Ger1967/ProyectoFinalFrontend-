@@ -12,6 +12,16 @@ function ModalCrear(props) {
     });
   };
 
+  // const handleUpload = async (data) => {
+  //   const { formaData } = data;
+  //   const response = await uploadImage(formaData);
+  //   console.log(response);
+  //   const formData = new FormData();
+  //   formData.append("foto", data.selectedFile);
+  //   formData.append("nombre", data.nombre);
+  //   formData.append("descripcion", data.descripcion);
+  // };
+
   const {
     register,
     handleSubmit,
