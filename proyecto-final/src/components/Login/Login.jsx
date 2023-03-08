@@ -23,7 +23,12 @@ function Login() {
 
   return (
     <div className="login-container">
-      {" "}
+      <section className="register-titulo">
+        <div className="register-logo">
+          <img src="./img/logoHSverde.png" alt="logo HS" />
+        </div>
+        <h2>HOME SERVICE</h2>
+      </section>
       <form onSubmit={handleSubmit(onSubmit)} className="contenedor">
         <div className="formulario">
           <div className="derecha">
