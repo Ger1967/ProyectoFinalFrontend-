@@ -1,0 +1,109 @@
+.servicios {
+  width: 99vw;
+  height: fit-content;
+  background-color: #fbf8f1;
+  margin: 0;
+}
+
+.header-servicios {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 99vw;
+  height: 20vh;
+  background-color: #f7ecde;
+}
+
+.logoHS img {
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.header-servicios h2 {
+  padding-left: 25rem;
+  text-transform: capitalize;
+  font-size: 4rem;
+  letter-spacing: 15px;
+  color: #847864;
+}
+
+.servicios-atras button {
+  width: 4.5rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 7px;
+  border: none;
+  background-color: #54bab9;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.4s;
+  color: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.body-servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.servicios-descripcion {
+  width: 50vw;
+  color: #847864;
+  font-weight: 600;
+  background-color: #f7ecde;
+  border-radius: 10px;
+  margin: 2rem;
+}
+
+.servicios-descripcion p {
+  padding: 1.5rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+hr {
+  width: 60%;
+  border: thin solid #e9dac1;
+  margin: 2rem;
+}
+
+.servicios-funciones {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-top: 2rem;
+}
+
+.funciones-cards {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  background-color: #f7ecde;
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+.funciones-icono {
+  width: 6rem;
+  align-self: center;
+  filter: invert(70%) sepia(37%) saturate(509%) hue-rotate(131deg)
+    brightness(87%) contrast(90%);
+}
+
+.funciones-info {
+  width: 100%;
+  text-align: center;
+  line-height: 1.7rem;
+  color: #847864;
+  font-weight: 500;
+}
+
+.funciones-info h4 {
+  font-size: 1.5rem;
+}

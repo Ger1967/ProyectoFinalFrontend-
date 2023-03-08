@@ -1,18 +1,26 @@
 .main {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   margin: 0;
-  padding-left: 10rem;
-  padding-right: 10rem;
   background-color: #fbf8f1;
 }
 
-.main-titulo {
-  margin-top: 0;
-  padding-top: 1rem;
+.main-titulo h2 {
+  margin: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
+  color: #847864;
+}
+
+.main-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
 }
 
 .card {
@@ -22,7 +30,7 @@
   border-radius: 10px;
   width: 20vw;
   height: 50vh;
-  margin: 2rem 1rem;
+  margin: 2rem 2rem;
 }
 
 .card:hover {

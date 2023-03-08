@@ -1,0 +1,77 @@
+.admin-fondo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fbf8f1;
+  padding: 2rem;
+}
+
+.header-admin {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 20vh;
+  background-color: #f7ecde;
+}
+
+.logoHS img {
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.header-admin h2 {
+  padding-left: 15rem;
+  text-transform: capitalize;
+  font-size: 4rem;
+  letter-spacing: 10px;
+  color: #847864;
+}
+
+.atras-admin {
+  width: 4.5rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 7px;
+  border: none;
+  background-color: #54bab9;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.4s;
+  color: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-container {
+  align-self: flex-start;
+}
+
+.admin-menu ul {
+  margin-top: 2rem;
+  list-style: none;
+}
+.menu-opciones {
+  /* min-width: 7rem; */
+  font-size: 1.5rem;
+  line-height: 5rem;
+  background-color: white;
+  border: medium solid #54bab9;
+  border-radius: 20px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.btn-modal {
+  font-size: 1.5rem;
+  background-color: white;
+  border: none;
+}
+
+.btn-modal:hover {
+  background-color: white;
+}

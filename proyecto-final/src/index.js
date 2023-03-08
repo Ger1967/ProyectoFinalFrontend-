@@ -22,6 +22,10 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: "/register",
+    element: <Register />,
+  },
+  {
     path: "/empresa",
     element: <Empresa />,
   },

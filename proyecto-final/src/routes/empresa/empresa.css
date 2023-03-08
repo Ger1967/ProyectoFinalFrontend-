@@ -1,0 +1,109 @@
+.empresa {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fbf8f1;
+  margin: 0;
+}
+
+.header-empresa {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 100vw;
+  height: 20vh;
+  background-color: #f7ecde;
+}
+
+.logoHS img {
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.header-empresa h2 {
+  padding-left: 25rem;
+  text-transform: capitalize;
+  font-size: 4rem;
+  letter-spacing: 15px;
+  color: #847864;
+}
+
+.empresa-atras button {
+  width: 4.5rem;
+  height: 2rem;
+  margin: 1rem;
+  border-radius: 7px;
+  border: none;
+  background-color: #54bab9;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.4s;
+  color: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.body-empresa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nosotros h3 {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  color: #847864;
+}
+
+.fotos-nosotros {
+  display: flex;
+  justify-content: space-around;
+  width: 70vw;
+  padding: 2rem;
+}
+
+.ceos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foto-ceo {
+  width: 7rem;
+}
+
+.ceos h4 {
+  font-size: 1.5rem;
+  color: #54bab9;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.ceos p {
+  margin-top: 0;
+  color: #847864;
+  font-weight: 800;
+}
+
+.nosotros-descripcion {
+  width: 50vw;
+  color: #847864;
+  font-weight: 600;
+  background-color: #f7ecde;
+  border-radius: 10px;
+  margin-top: 5rem;
+}
+
+.nosotros-descripcion p {
+  padding: 1.5rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
