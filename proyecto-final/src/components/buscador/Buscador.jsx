@@ -35,22 +35,13 @@ const departamentos = [
   { value: "Rocha", mostrar: "Rocha" },
 ];
 
-
 function Buscador(props) {
-
   const { register, handleSubmit } = useForm();
 
   return (
     <div className="container">
-<<<<<<< HEAD
-      <h1 className="tituloBuscador">
-        Encuentra la Propiedad que estas Buscando
-      </h1>
-      <form className="filtro" onSubmit={handleSubmit(onSubmit)}>
-=======
       <h1>Encuentra la Propiedad que estas Buscando</h1>
       <form className="filtro" onSubmit={handleSubmit(props.filtrar)}>
->>>>>>> c11f9980da37e872274888fdd838a9c2608129f5
         <select name="Operacion" {...register("operacion")}>
           {operacion.map((operacion) => {
             return <option value={operacion.value}>{operacion.mostrar}</option>;

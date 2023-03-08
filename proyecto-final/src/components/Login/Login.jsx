@@ -1,5 +1,4 @@
 import { log } from "../../api/Rule_inmuebles";
-import { Link, useNavigate } from "react-router-dom";
 import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./login.css";
@@ -14,7 +13,7 @@ function Login() {
       const response = await log(email, password);
       console.log(response);
       if (email === data.email && password === data.password) {
-        navigate(home);
+        navigate(`home`);
       }
     } catch (error) {
       console.log(error);
