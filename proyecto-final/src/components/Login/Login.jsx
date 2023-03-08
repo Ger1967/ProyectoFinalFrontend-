@@ -1,5 +1,5 @@
 import { log } from "../../api/Rule_inmuebles";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./login.css";
 
@@ -22,22 +22,41 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="contenedor">
-      <div className="formulario-izquierda">
-        <label>
-          Email:
-          <input type="text" {...register("email")} />
-        </label>
-        <label>
-          Password:
-          <input type="password" {...register("password")} />
-        </label>
-        <button type="submit">Log in</button>
-      </div>
-      <Link to="/register">
-        <button type="submit">Registrarse</button>
-      </Link>
-    </form>
+
+    <div className="login-container">
+      <section className="register-titulo">
+        <div className="register-logo">
+          <img src="./img/logoHSverde.png" alt="logo HS" />
+        </div>
+        <h2>HOME SERVICE</h2>
+      </section>
+      <form onSubmit={handleSubmit(onSubmit)} className="contenedor">
+        <div className="formulario">
+          <div className="derecha">
+            <label>
+              Email
+              <input type="text" {...register("email")} placeholder="Email" />
+            </label>
+            <label>
+              Password
+              <input
+                type="password"
+                {...register("password")}
+                placeholder="Contrase単a"
+              />
+            </label>
+            <button type="submit">Ingresar</button>
+          </div>
+          <div className="izquierda">
+            <h1 className="titulo"> Bienvenido </h1>
+            <hr />
+            <a href="#"> 多Olvidaste tu contrase単a?</a>
+            <Link to="/register"> 多No tienes una cuenta? Registrate </Link>
+            <hr />
+          </div>
+        </div>
+      </form>
+    </div>
   );
 }
 export default Login;

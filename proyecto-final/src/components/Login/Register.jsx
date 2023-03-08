@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { registro } from "../../api/Rule_inmuebles";
 import { useForm } from "react-hook-form";
-// import { useLocation } from "react-router-dom";
+import "./register.css";
+import { Link } from "react-router-dom";
 
 function Register() {
   const [registrarUsuario, setRegistrarUsuario] = useState({});
-
-  // const location = useLocation();
-  // const { id } = location.state;
 
   const nuevoRegistro = async (usuarios) => {
     await registro(usuarios).then((response) => {
@@ -32,25 +30,56 @@ function Register() {
   };
 
   return (
-    <form action="" onSubmit={handleSubmit(onSubmit)}>
-      <label>
-        Nombre:
-        <input type="text" name="nombre" {...register("nombre")} />
-      </label>
-      <label>
-        Correo electrónico:
-        <input type="email" name="email" {...register("email")} />
-      </label>
-      <label>
-        Contraseña:
-        <input type="password" name="password" {...register("password")} />
-      </label>
-      <label>
-        Confirmar contraseña:
-        <input type="password" name="confirmPassword" />
-      </label>
-      <button type="submit">Registrarse</button>
-    </form>
+    <div className="register-container">
+      <Link to="/" className="btn-register">
+        <button className="atras-register">Atras</button>
+      </Link>
+      <section className="register-titulo">
+        <div className="register-logo">
+          <img src="./img/logoHSverde.png" alt="logo HS" />
+        </div>
+        <h2>HOME SERVICE</h2>
+      </section>
+      <form
+        action=""
+        onSubmit={handleSubmit(onSubmit)}
+        className="form-register"
+      >
+        <div className="register-nombre">
+          <input
+            type="text"
+            name="nombre"
+            {...register("nombre")}
+            placeholder="Nombre"
+          />
+          <input
+            type="email"
+            name="email"
+            {...register("email")}
+            placeholder="E-mail"
+          />
+        </div>
+        <div className="register-password">
+          <input
+            type="password"
+            name="password"
+            {...register("password")}
+            placeholder="
+          Contraseña"
+          />
+
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirmar contraseña"
+          />
+        </div>
+
+        <button type="submit" className="submit-register">
+          Registrarse
+        </button>
+      </form>
+    </div>
   );
 }
 

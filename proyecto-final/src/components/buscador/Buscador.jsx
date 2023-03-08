@@ -37,12 +37,14 @@ const departamentos = [
 
 
 function Buscador(props) {
-
   const { register, handleSubmit } = useForm();
 
   return (
     <div className="container">
-      <h1>Encuentra la Propiedad que estas Buscando</h1>
+
+      <h1 className="tituloBuscador">
+        Encuentra la Propiedad que estas Buscando
+      </h1>
       <form className="filtro" onSubmit={handleSubmit(props.filtrar)}>
         <select name="Operacion" {...register("operacion")}>
           {operacion.map((operacion) => {
