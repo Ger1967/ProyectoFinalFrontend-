@@ -77,7 +77,27 @@
 }
 
 .foto-ceo {
-  width: 7rem;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 100%;
+}
+
+/* .german {
+  background-image: url(../../../public/img/german.jpg);
+  background-size: cover;
+  background-position: center;
+} */
+
+.shindey {
+  background-image: url(../../../public/img/shindey.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bruno {
+  background-image: url(../../../public/img/bruno.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .ceos h4 {
@@ -99,7 +119,7 @@
   font-weight: 600;
   background-color: #f7ecde;
   border-radius: 10px;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .nosotros-descripcion p {
