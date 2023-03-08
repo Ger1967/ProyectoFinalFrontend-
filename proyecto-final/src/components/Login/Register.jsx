@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { registro } from "../../api/Rule_inmuebles";
 import { useForm } from "react-hook-form";
-// import { useLocation } from "react-router-dom";
+import "./register.css";
 
 function Register() {
   const [registrarUsuario, setRegistrarUsuario] = useState({});
-
-  // const location = useLocation();
-  // const { id } = location.state;
 
   const nuevoRegistro = async (usuarios) => {
     await registro(usuarios).then((response) => {
@@ -32,25 +29,37 @@ function Register() {
   };
 
   return (
-    <form action="" onSubmit={handleSubmit(onSubmit)}>
-      <label>
-        Nombre:
-        <input type="text" name="nombre" {...register("nombre")} />
-      </label>
-      <label>
-        Correo electrónico:
-        <input type="email" name="email" {...register("email")} />
-      </label>
-      <label>
-        Contraseña:
-        <input type="password" name="password" {...register("password")} />
-      </label>
-      <label>
-        Confirmar contraseña:
-        <input type="password" name="confirmPassword" />
-      </label>
-      <button type="submit">Registrarse</button>
-    </form>
+    <div className="register-container">
+      <section>
+        <div className="register-logo">
+          <img src="./img/logoHSverde.png" alt="logo HS" />
+        </div>
+        <p>HOME SERVICE</p>
+      </section>
+      <form
+        action=""
+        onSubmit={handleSubmit(onSubmit)}
+        className="form-register"
+      >
+        <label>
+          Nombre:
+          <input type="text" name="nombre" {...register("nombre")} />
+        </label>
+        <label>
+          Correo electrónico:
+          <input type="email" name="email" {...register("email")} />
+        </label>
+        <label>
+          Contraseña:
+          <input type="password" name="password" {...register("password")} />
+        </label>
+        <label>
+          Confirmar contraseña:
+          <input type="password" name="confirmPassword" />
+        </label>
+        <button type="submit">Registrarse</button>
+      </form>
+    </div>
   );
 }
 

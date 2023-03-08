@@ -10,7 +10,9 @@ function Header() {
       </div>
       <div className="menu">
         <ul className="menu-items">
-          <li>Inicio</li>
+          <Link to="/">
+            <li>Inicio</li>
+          </Link>
           <Link to="/empresa">
             <li>Empresa</li>
           </Link>
