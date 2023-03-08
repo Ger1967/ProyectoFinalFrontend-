@@ -21,7 +21,7 @@ function Empresa() {
           <h3>NOSOTROS</h3>
           <div className="fotos-nosotros">
             <div className="ceos">
-              <div className="foto-ceo">
+              <div className="foto-ceo german">
                 <img src="" alt="CEO German" />
               </div>
               <h4>German Alfaro</h4>
@@ -29,16 +29,16 @@ function Empresa() {
             </div>
 
             <div className="ceos">
-              <div className="foto-ceo">
-                <img src="" alt="CEO Shindey" />
+              <div className="foto-ceo shindey">
+                {/* <img src="./img/shindey.jpeg" alt="CEO Shindey" /> */}
               </div>
               <h4>Shindey Madrid</h4>
               <p>Home Service CEO</p>
             </div>
 
             <div className="ceos">
-              <div className="foto-ceo">
-                <img src="" alt="CEO Bruno" />
+              <div className="foto-ceo bruno">
+                {/* <img src="./img/bruno.jpg" alt="CEO Bruno" /> */}
               </div>
               <h4>Bruno Benvenuto</h4>
               <p>Home Service CEO</p>
