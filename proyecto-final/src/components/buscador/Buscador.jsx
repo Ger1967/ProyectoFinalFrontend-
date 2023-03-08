@@ -37,12 +37,11 @@ const departamentos = [
 
 
 function Buscador(props) {
-
-
   const { register, handleSubmit } = useForm();
 
   return (
     <div className="container">
+
       <h1 className="tituloBuscador">
         Encuentra la Propiedad que estas Buscando
       </h1>
