@@ -1,18 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./main.css";
-import { obtenerDatos } from "../../api/Rule_inmuebles";
 import { useState } from "react";
-import Buscador from "../buscador/Buscador";
 
 function Main(props) {
-
-  // const id = props.mostrarInmuebles.id_inmuebles;
-
-  // const { idInmueble } = useParams();
-  const [resultados, setResultados] = useState([]);
   return (
-
     <>
       <div className="main">
         <div className="main-titulo">
@@ -30,7 +22,6 @@ function Main(props) {
                   <article className="card-info">
                     <h5 className="operacion">{inmuebles.operacion}</h5>
                     <h4>{inmuebles.inmueble}</h4>
-
 
                     <div className="card-info-ubicacion">
                       <img

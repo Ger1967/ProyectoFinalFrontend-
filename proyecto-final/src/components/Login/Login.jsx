@@ -42,7 +42,7 @@ function Login() {
               <input
                 type="password"
                 {...register("password")}
-                placeholder="Contrase単a"
+                placeholder="Contraseña"
               />
             </label>
             <button type="submit">Ingresar</button>
@@ -50,8 +50,12 @@ function Login() {
           <div className="izquierda">
             <h1 className="titulo"> Bienvenido </h1>
             <hr />
-            <a href="#"> 多Olvidaste tu contrase単a?</a>
-            <Link to="/register"> 多No tienes una cuenta? Registrate </Link>
+            <div className="login-ayuda">
+              {" "}
+              <a href="#"> ¿Olvidaste tu contraseña?</a>
+              <Link to="/register"> ¿No tienes una cuenta? Registrate </Link>
+            </div>
+
             <hr />
           </div>
         </div>

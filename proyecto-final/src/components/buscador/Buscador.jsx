@@ -35,7 +35,6 @@ const departamentos = [
   { value: "Rocha", mostrar: "Rocha" },
 ];
 
-
 function Buscador(props) {
   const { register, handleSubmit } = useForm();
 
@@ -72,7 +71,7 @@ function Buscador(props) {
             );
           })}
         </select>
-        <button type="submit"> Boton </button>
+        <button type="submit"> Buscar </button>
       </form>
     </div>
   );

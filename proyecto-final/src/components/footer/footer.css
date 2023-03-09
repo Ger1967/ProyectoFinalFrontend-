@@ -1,13 +1,17 @@
 .footer {
   display: flex;
-  width: 100vw;
-  height: 25vh;
+  width: 99vw;
+  height: 20vh;
   background-color: #54bab9;
 }
 
 .footer-logo {
   width: auto;
   height: 100%;
+}
+
+.footer-logo img {
+  border-radius: 0;
 }
 
 .footer-direcciones {
