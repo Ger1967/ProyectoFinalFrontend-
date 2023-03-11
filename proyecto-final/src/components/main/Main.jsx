@@ -1,15 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./main.css";
-import { obtenerDatos } from "../../api/Rule_inmuebles";
-import { useState } from "react";
-import Buscador from "../buscador/Buscador";
 
 function Main(props) {
+
   // const id = props.mostrarInmuebles.id_inmuebles;
 
   // const { idInmueble } = useParams();
   const [resultados, setResultados] = useState([]);
+
   return (
     <>
       <div className="main">

@@ -1,5 +1,5 @@
 import { log } from "../../api/Rule_inmuebles";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import "./login.css";
 
@@ -23,20 +23,63 @@ function Login() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contenedor">
-      <div className="formulario-izquierda">
-        <label>
-          Email:
-          <input type="text" {...register("email")} />
-        </label>
-        <label>
-          Password:
-          <input type="password" {...register("password")} />
-        </label>
-        <button type="submit">Log in</button>
+      <div className="formulario">
+        <div className="derecha">
+          <label>
+            Email
+            <input type="text" {...register("email")} placeholder="Email" />
+          </label>
+          <label>
+            Password
+            <input
+              type="password"
+              {...register("password")}
+              placeholder="Contraseña"
+            />
+          </label>
+          <button type="submit">Ingresar</button>
+        </div>
+
+        <h2>HOME SERVICE</h2>
+      </section>
+      <form onSubmit={handleSubmit(onSubmit)} className="contenedor">
+        <div className="formulario">
+          <div className="derecha">
+            <label>
+              Email
+              <input type="text" {...register("email")} placeholder="Email" />
+            </label>
+            <label>
+              Password
+              <input
+                type="password"
+                {...register("password")}
+                placeholder="Contraseña"
+              />
+            </label>
+            <button type="submit">Ingresar</button>
+          </div>
+          <div className="izquierda">
+            <h1 className="titulo"> Bienvenido </h1>
+            <hr />
+            <div className="login-ayuda">
+              {" "}
+              <a href="#"> ¿Olvidaste tu contraseña?</a>
+              <Link to="/register"> ¿No tienes una cuenta? Registrate </Link>
+            </div>
+
+            <hr />
+          </div>
+
+        <div className="izquierda">
+          <h1 className="titulo"> Bienvenido </h1>
+          <hr />
+          <a href="#"> ¿Olvidaste tu contraseña?</a>
+          <Link to="/register"> ¿No tienes una cuenta? Registrate </Link>
+          <hr />
+
+        </div>
       </div>
-      <Link to="/register">
-        <button type="submit">Registrarse</button>
-      </Link>
     </form>
   );
 }

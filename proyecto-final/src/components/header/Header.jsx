@@ -10,7 +10,9 @@ function Header() {
       </div>
       <div className="menu">
         <ul className="menu-items">
-          <li>Inicio</li>
+          <Link to="/">
+            <li>Inicio</li>
+          </Link>
           <Link to="/empresa">
             <li>Empresa</li>
           </Link>
@@ -26,6 +28,17 @@ function Header() {
           <Link to="/administrar">
             <li>Administrar</li>
           </Link>
+          <section>
+            <div className="iconos-redes">
+              <img src="./img/facebook.png" alt="icon fb" />
+            </div>
+            <div className="iconos-redes">
+              <img src="./img/ig.png" alt="icono ig" />
+            </div>
+            <div className="iconos-redes">
+              <img src="./img/tiktok.png" alt="icono tiktok" />
+            </div>
+          </section>
         </ul>
       </div>
     </div>
