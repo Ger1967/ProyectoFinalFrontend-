@@ -26,7 +26,11 @@ function Detalles() {
 
       <div className="seccion-detalles">
         <div className="detalles-img">
-          <img src={arrayPublicacion[0]?.foto} alt="foto" />
+          {/* <img src={"http://localhost:3002/uploads/2.jpg.jpeg"} alt="foto" /> */}
+          <img
+            src={`http://localhost:3002${arrayPublicacion[0]?.foto}`}
+            alt="foto"
+          />
         </div>
 
         <section className="detalles-body">

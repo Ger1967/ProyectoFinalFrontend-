@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import "./main.css";
 
 function Main(props) {
+
+  // const id = props.mostrarInmuebles.id_inmuebles;
+
+  // const { idInmueble } = useParams();
+  const [resultados, setResultados] = useState([]);
+
   return (
     <>
       <div className="main">
@@ -15,7 +21,11 @@ function Main(props) {
               <>
                 <div className="card">
                   <div className="card-foto">
-                    <img src={inmuebles.foto} alt="foto" width="200" />
+                    <img
+                      src={`http://localhost:3002${inmuebles?.foto}`}
+                      alt="foto"
+                      width="200"
+                    />
                   </div>
 
                   <article className="card-info">

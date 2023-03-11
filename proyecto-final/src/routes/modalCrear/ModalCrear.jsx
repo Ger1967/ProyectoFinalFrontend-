@@ -30,29 +30,28 @@ function ModalCrear(props) {
   };
 
   // LOGICA PARA CARGAR LA FOTO
-  const selectedHandler = (e) => {
-    setFile(e.target.files[0]);
+
+  const [image, setImage] = useState({});
+
+  const fileOnChange = (event) => {
+    console.log(event.target.files[0]);
   };
 
-  const sendHandler = () => {
-    if (!file) {
-      // alert("Por favor carga una imagen para tu publicacion.");
-      return;
-    }
 
-    const formdata = new FormData();
-    formdata.append("image", file);
+  const sendImage = (e) => {
+    let formdata = new FormData();
 
-    fetch("http://localhost:3001/api/inmuebles/nuevoInmueble/foto", {
+
+    formdata.append("imagen", image);
+
+    fetch("http://localhost:3002/foto", {
       method: "POST",
       body: formdata,
     })
       .then((res) => res.text())
-      .then((res) => console.log(res))
-      .catch((err) => {
-        console.error(err);
+      .then((resBody) => {
+        console.log(resBody);
       });
-    setFile(null);
   };
 
   return (
@@ -190,14 +189,15 @@ function ModalCrear(props) {
             <input
               type="file"
               name="foto"
-              onChange={selectedHandler}
-              {...register("foto")}
+              onChange={fileOnChange}
+              multiple
+              // {...register("foto")}
             />
           </section>
         </div>
 
         <div>
-          <button type="submit" className="btn-publicar" onClick={sendHandler}>
+          <button type="submit" className="btn-publicar" onClick={sendImage}>
             Publicar
           </button>
         </div>

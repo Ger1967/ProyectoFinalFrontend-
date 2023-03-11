@@ -36,7 +36,7 @@ export const inmuebles = async () => {
     })
     .catch((error) => {
       console.log(error);
-      throw error.response.data.error || "Error procesando la solicitud";
+      throw error || "Error procesando la solicitud";
     });
 };
 
