@@ -55,8 +55,8 @@
   margin-top: 2rem;
   list-style: none;
 }
+
 .menu-opciones {
-  /* min-width: 7rem; */
   font-size: 1.5rem;
   line-height: 5rem;
   background-color: white;
@@ -64,6 +64,8 @@
   border-radius: 20px;
   padding: 1rem;
   cursor: pointer;
+  margin-top: 1.5rem;
+  color: black;
 }
 
 .btn-modal {
