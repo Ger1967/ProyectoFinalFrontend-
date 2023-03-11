@@ -46,7 +46,7 @@ function ModalCrear(props) {
 
   const sendHandler = () => {
     if (!file) {
-      alert("Por favor carga una imagen para tu publicacion.");
+      // alert("Por favor carga una imagen para tu publicacion.");
       return;
     }
 
