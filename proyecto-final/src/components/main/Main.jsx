@@ -6,13 +6,11 @@ import { useState } from "react";
 import Buscador from "../buscador/Buscador";
 
 function Main(props) {
-
   // const id = props.mostrarInmuebles.id_inmuebles;
 
   // const { idInmueble } = useParams();
   const [resultados, setResultados] = useState([]);
   return (
-
     <>
       <div className="main">
         <div className="main-titulo">
@@ -24,13 +22,16 @@ function Main(props) {
               <>
                 <div className="card">
                   <div className="card-foto">
-                    <img src={inmuebles.foto} alt="foto" width="200" />
+                    <img
+                      src={`http://localhost:3002${inmuebles?.foto}`}
+                      alt="foto"
+                      width="200"
+                    />
                   </div>
 
                   <article className="card-info">
                     <h5 className="operacion">{inmuebles.operacion}</h5>
                     <h4>{inmuebles.inmueble}</h4>
-
 
                     <div className="card-info-ubicacion">
                       <img
