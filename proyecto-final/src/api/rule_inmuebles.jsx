@@ -68,7 +68,6 @@ export const postInmueble = async (nuevaPub) => {
     });
 };
 
-
 // FILTRADO DE INMUEBLES
 
 export const obtenerDatos = async (data) => {
@@ -79,7 +78,7 @@ export const obtenerDatos = async (data) => {
     dormitorio: data?.dormitorio,
     departamento: data?.departamento,
   })
-     .then((response) => {
+    .then((response) => {
       return response.data;
     })
     .catch((error) => {
@@ -98,4 +97,3 @@ export const foto = async (formData) => {
       console.error(err);
     });
 };
-

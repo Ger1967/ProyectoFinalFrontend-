@@ -71,7 +71,7 @@ function Buscador(props) {
             );
           })}
         </select>
-        <button type="submit"> Boton </button>
+        <button type="submit"> Buscar </button>
       </form>
     </div>
   );

@@ -13,16 +13,6 @@ function ModalCrear(props) {
     });
   };
 
-  // const handleUpload = async (data) => {
-  //   const { formaData } = data;
-  //   const response = await uploadImage(formaData);
-  //   console.log(response);
-  //   const formData = new FormData();
-  //   formData.append("foto", data.selectedFile);
-  //   formData.append("nombre", data.nombre);
-  //   formData.append("descripcion", data.descripcion);
-  // };
-
   const {
     register,
     handleSubmit,
@@ -46,7 +36,7 @@ function ModalCrear(props) {
 
   const sendHandler = () => {
     if (!file) {
-      alert("Por favor carga una imagen para tu publicacion.");
+      // alert("Por favor carga una imagen para tu publicacion.");
       return;
     }
 

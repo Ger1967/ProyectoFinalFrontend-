@@ -34,9 +34,12 @@ function Administrar() {
               </button>
             </li>
 
-            <li className="menu-opciones">Borrar una publicacion</li>
-            <li className="menu-opciones">Modificar publicacion existente</li>
-            <li className="menu-opciones">Ver todas las publicaciones</li>
+            <Link to="/borrar">
+              <li className="menu-opciones">Borrar una publicacion</li>
+            </Link>
+            <Link to="/modificar">
+              <li className="menu-opciones">Modificar publicacion existente</li>
+            </Link>
           </ul>
         </div>
       </div>
